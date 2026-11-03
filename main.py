@@ -4,7 +4,7 @@ from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_classic.agents import create_tool_calling_agent, AgentExecutor
-from tools import search_tool, wiki_tool
+from tools import search_tool, wiki_tool, save_to_txt
 
 load_dotenv()
 
@@ -44,8 +44,19 @@ agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 query = input("What can I help you research?")
 raw_response = agent_executor.invoke({"query": query})
 
+output = raw_response.get("output")
+
+if isinstance(output, str):
+    text = output
+else:
+    text = ""
+    for block in output:
+        if isinstance(block, dict) and block.get("type") == "text":
+            text = block["text"]
+
 try:
-    structured_response = parser.parse(raw_response.get("output")[0]["text"])
+    structured_response = parser.parse(text)
     print(structured_response)
+    save_to_txt(structured_response.model_dump_json(indent=2))
 except Exception as e:
-    print("error parsing response", e, "Raw Response - ", raw_response)
+    print("Error parsing response", e, "Raw Response - ", raw_response)

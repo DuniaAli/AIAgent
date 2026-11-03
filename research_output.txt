@@ -1,0 +1,17 @@
+--- Research Output ---
+Timestamp: 2026-11-03 08:11:10
+
+{
+  "topic": "How the James Webb Space Telescope (JWST) detects exoplanet atmospheres",
+  "summary": "JWST detects exoplanet atmospheres mainly by spectroscopy, which means splitting light into its component wavelengths, like a rainbow. It does this in the infrared, where many important molecules have strong absorption features. The main methods are as follows. (1) Transmission spectroscopy: when a planet passes in front of (transits) its host star, a small fraction of starlight is filtered through the thin ring of atmosphere at the planet's day-night boundary (the terminator). Molecules such as water vapor, carbon dioxide, methane and sulfur dioxide absorb specific wavelengths. This makes the planet appear very slightly larger at those wavelengths, so the star's dimming depends on wavelength. Astronomers compare the in-transit and out-of-transit spectra to find the planet's transmission spectrum, which reveals the atmosphere's composition, clouds and hazes. Examples include the 0.6–5.3 μm spectrum of WASP-39b, which showed water vapor, CO2 and SO2. The SO2 was the first clear sign of photochemistry driven by the host star in an exoplanet atmosphere. (2) Emission spectroscopy and secondary-eclipse measurements: when the planet passes behind the star, the drop in total light shows the planet's own thermal emission and reflected light. This gives dayside temperature and composition. Phase curves track brightness through the whole orbit and show how heat is distributed around the planet. (3) Direct imaging and coronagraphy: for some young, wide-orbit planets, JWST's coronagraphs block the star's light so the planet's light can be studied directly. Instruments such as NIRSpec, NIRISS, NIRCam and MIRI cover roughly 0.6–28 μm. This lets JWST detect a range of gases from hot Jupiters to small rocky planets. JWST's large 6.5 m mirror and its stable orbit at L2 give it the precision to measure signals of tens to hundreds of parts per million. Limitations include stellar activity contamination, clouds and hazes that mute spectral features, and the difficulty of observing small planets around Sun-like stars.",
+  "sources": [
+    "https://www.nasa.gov (NASA JWST exoplanet science pages)",
+    "https://en.wikipedia.org/wiki/James_Webb_Space_Telescope",
+    "Web search results on JWST transmission spectroscopy, including WASP-39b results"
+  ],
+  "tools_used": [
+    "search",
+    "wikipedia"
+  ]
+}
+
