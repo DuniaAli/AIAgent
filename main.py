@@ -4,7 +4,7 @@ from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_classic.agents import create_tool_calling_agent, AgentExecutor
-from tools import search_tool
+from tools import search_tool, wiki_tool
 
 load_dotenv()
 
@@ -33,7 +33,7 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 ).partial(format_instructions=parser.get_format_instructions())
 
-tools = [search_tool]
+tools = [search_tool, wiki_tool]
 agent = create_tool_calling_agent(
     llm=llm,
     prompt=prompt,
